@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Figma Assets Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: ebfcd5f9253a89c4ca30878f1a0c4cb5, type: 3}
+    - {fileID: 2800000, guid: 9e50d7a3b8ad22f428e647f768066700, type: 3}
+    - {fileID: 2800000, guid: 9288cc2dc9f24504cbefb7c30bf90bcf, type: 3}
+    - {fileID: 2800000, guid: 0dc32f1bf7104d540b0c94d30d4461a1, type: 3}
+    - {fileID: 2800000, guid: 90de62d5664b37b4c8d864c1b7dab126, type: 3}
+    - {fileID: 2800000, guid: 130accb228bf55c4697a8160e0720602, type: 3}
+    - {fileID: 2800000, guid: eabc2708a0681f54987b04801ae06fbe, type: 3}
+    - {fileID: 2800000, guid: 4ab7a4e575dc8a94887fe778e54fb3d8, type: 3}
+    - {fileID: 2800000, guid: e3d936a689327b84cbce76f0cfd5bc74, type: 3}
+    - {fileID: 2800000, guid: 05bf4431b28da0a44b55cb58b6bc2316, type: 3}
+    - {fileID: 2800000, guid: c02a4424e2b07b848b70360e39e7efe2, type: 3}
+    - {fileID: 2800000, guid: dc060cbaa728fcc4f8d025d0b45ed47e, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 05bf4431b28da0a44b55cb58b6bc2316, type: 3}
+  - {fileID: 21300000, guid: 130accb228bf55c4697a8160e0720602, type: 3}
+  - {fileID: 21300000, guid: 9e50d7a3b8ad22f428e647f768066700, type: 3}
+  - {fileID: 21300000, guid: c02a4424e2b07b848b70360e39e7efe2, type: 3}
+  - {fileID: 21300000, guid: 90de62d5664b37b4c8d864c1b7dab126, type: 3}
+  - {fileID: 21300000, guid: 4ab7a4e575dc8a94887fe778e54fb3d8, type: 3}
+  - {fileID: -2413806693520163455, guid: e3d936a689327b84cbce76f0cfd5bc74, type: 3}
+  - {fileID: 21300000, guid: eabc2708a0681f54987b04801ae06fbe, type: 3}
+  - {fileID: 21300000, guid: ebfcd5f9253a89c4ca30878f1a0c4cb5, type: 3}
+  - {fileID: 21300000, guid: dc060cbaa728fcc4f8d025d0b45ed47e, type: 3}
+  - {fileID: 21300000, guid: 0dc32f1bf7104d540b0c94d30d4461a1, type: 3}
+  - {fileID: 21300000, guid: 9288cc2dc9f24504cbefb7c30bf90bcf, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - bar-chart
+  - VectorHome
+  - Rectangle 1 Home Bar
+  - Android Large - 2
+  - settingsSettings
+  - Ellipse 1Ball Path
+  - Circle
+  - Ellipse 2Ball
+  - paradise-island-2d-background-environment-mobile-game-high-quality-horizontal-background-landscape-gaming-template-design-location-generative-ai
+    1Background
+  - 190521 1Pause
+  - Rectangle 3 Block
+  - Rectangle 2Rotating Square
+  m_RenderDataMap: {}
+  m_Tag: Figma Assets Sprite Atlas
+  m_IsVariant: 0

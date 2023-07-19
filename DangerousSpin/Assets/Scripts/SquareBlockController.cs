@@ -32,7 +32,6 @@ public class SquareBlockController : MonoBehaviour
     protected virtual void SpawnSquareBlock()
     {
         float randomY = Random.Range(minYSpawn, maxYSpawn); // Randomize Y position
-        Debug.Log(randomY);
 
         Vector3 spawnPosition = new Vector3(transform.position.x, randomY, transform.position.z);
         GameObject squareBlock = ObjectPooler.Instance.SpawnFromPool(squareBlockPrefab.tag, spawnPosition, Quaternion.identity);

@@ -736,7 +736,6 @@ GameObject:
   - component: {fileID: 960589971}
   - component: {fileID: 960589970}
   - component: {fileID: 960589969}
-  - component: {fileID: 960589972}
   m_Layer: 0
   m_Name: Block Spawner
   m_TagString: Untagged
@@ -790,8 +789,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 442ebe8a513f244419c6cfd443eb8163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
-  spawnDelay: 1.1
+  movementSpeed: 1.5
+  spawnDelay: 1.5
   squareBlockPrefab: {fileID: 7585108098421801484, guid: 19a3bf064a7b77d43925023d184adf3a, type: 3}
   minYSpawn: -0.7
   maxYSpawn: 0.85
@@ -814,21 +813,6 @@ MonoBehaviour:
   - tag: NormalBlock
     prefab: {fileID: 7585108098421801484, guid: 19a3bf064a7b77d43925023d184adf3a, type: 3}
     size: 100
---- !u!114 &960589972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 960589967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0efd04aa679ab4e48a875d031d68c2fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  squareController: {fileID: 5446665492583356701}
-  ballController: {fileID: 639347721808279147}
-  squareBlockController: {fileID: 960589970}
 --- !u!1 &1011446318
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,6 +880,10 @@ MonoBehaviour:
   squareController: {fileID: 5446665492583356701}
   ballController: {fileID: 639347721808279147}
   squareBlockController: {fileID: 960589970}
+  squareSpeed: 0
+  ballSpeed: 0
+  blockMovementSpeed: 0
+  blockSpawnDelay: 0
 --- !u!1 &1012414744
 GameObject:
   m_ObjectHideFlags: 0
@@ -2548,7 +2536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbfa9f8867145404cbd9fee41ca6587d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 150
+  rotationSpeed: 120
 --- !u!1 &639347721808279158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,7 +2853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a67bbdb0f4b71a44bdfa9a88c9821ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 150
+  rotationSpeed: 120
 --- !u!224 &5446665492583356702
 RectTransform:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4777046281134470295}
   - component: {fileID: 4695730423144437893}
   - component: {fileID: 6156478304580130748}
-  - component: {fileID: 6692260761284978076}
+  - component: {fileID: -8524240591435386277}
   m_Layer: 0
   m_Name: SpecialBlock
   m_TagString: SpecialBlock
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9607844, g: 0.9176471, b: 0.6745098, a: 1}
+  m_Color: {r: 1, g: 0.88235295, b: 0.7411765, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -126,7 +126,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 6
---- !u!114 &6692260761284978076
+--- !u!114 &-8524240591435386277
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,6 +135,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8949265330000661194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 737868a93b2df2845b20830e41922904, type: 3}
+  m_Script: {fileID: 11500000, guid: 5af0c44c69f41ee458408fa33659bbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleFactor: 1
+  rotationSpeed: 270
+  animationDuration: 0.5

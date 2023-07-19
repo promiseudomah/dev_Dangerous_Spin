@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
 
     public void AddScore(){
 
-        scoreCount += 1;
+        scoreCount += 10;
         Score.text = scoreCount.ToString();
 
         FlowManager.Instance.FLOW(scoreCount);

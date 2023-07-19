@@ -17,20 +17,16 @@ public class Ball : MonoBehaviour
     {
         if(other.collider.CompareTag("NormalBlock")){
 
-            
             GameObject splash = Instantiate(PlayerDeath, transform.position, Quaternion.identity);
             gameObject.SetActive(false);
-
-            Debug.Log("Game Over");
             GameManager.Instance.GameOver();
+  
         }
 
         else if(other.collider.CompareTag("SpecialBlock")){
 
             GameObject splash = Instantiate(SpecialBlockSpash, other.transform.position, Quaternion.identity);
             other.gameObject.SetActive(false);
-
-            Debug.Log("Nice!!! ");
             GameManager.Instance.AddScore();
         }
 

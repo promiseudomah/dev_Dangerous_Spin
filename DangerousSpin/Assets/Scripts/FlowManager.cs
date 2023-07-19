@@ -8,6 +8,15 @@ public class FlowManager : MonoBehaviour
     public BallController ballController;
     public SquareBlockController squareBlockController;
 
+    [Space(40)]
+    [Header("FLOW Variables")]
+    
+    [SerializeField] float squareSpeed;
+    [SerializeField] float ballSpeed;
+    [SerializeField] float blockMovementSpeed;
+    [SerializeField] float blockSpawnDelay;
+    [Space(40)]
+
     #region Singleton
 
     public static FlowManager Instance;
@@ -15,9 +24,20 @@ public class FlowManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        
     }
 
     #endregion
+
+    void Update()
+    {
+        squareSpeed = squareController.rotationSpeed;
+        ballSpeed = ballController.rotationSpeed;
+
+        blockMovementSpeed = squareBlockController.movementSpeed;
+        blockSpawnDelay = squareBlockController.spawnDelay;
+    }
 
 
     public void FLOW(int playerScore)
@@ -28,15 +48,15 @@ public class FlowManager : MonoBehaviour
         squareController.SwitchRotation();
 
         // Modify rotation speed based on player score
-        squareController.rotationSpeed = 150f + playerScore * 10f;
-        ballController.rotationSpeed = 150f + playerScore * 10f;
+        squareController.rotationSpeed = 111.5f + playerScore * 7.5f;
+        ballController.rotationSpeed = 111.5f + playerScore * 2.5f;
 
         // Modify movement speed and spawn delay based on player score
-        squareBlockController.movementSpeed = 2f + playerScore * 0.25f;
-        squareBlockController.spawnDelay = 1f - playerScore * 0.025f;
+        squareBlockController.movementSpeed = 1.5f + playerScore * 0.075f;
+        squareBlockController.spawnDelay = 1.75f - playerScore * 0.015f;
 
         // Ensure spawn delay doesn't go below a certain value
-        squareBlockController.spawnDelay = Mathf.Max(squareBlockController.spawnDelay, 0.2f);
+        squareBlockController.spawnDelay = Mathf.Max(squareBlockController.spawnDelay, 0.75f);
     }
 
 

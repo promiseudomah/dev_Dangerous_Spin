@@ -26,7 +26,9 @@ public class LocaleSelector : MonoBehaviour
         
         active = true;
         yield return LocalizationSettings.InitializationOperation;
-        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[localID];
+        LocalizationSettings.SelectedLocale = 
+            LocalizationSettings.AvailableLocales.Locales[localID];
+        
         PlayerPrefs.SetInt("LocalKey", localID);
         active = false;
     }

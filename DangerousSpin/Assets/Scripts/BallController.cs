@@ -5,7 +5,7 @@ public class BallController : MonoBehaviour
     public float rotationSpeed = 100f; // Speed modifier 
     protected bool isClockwise = true; // Flag to track the ball's movement direction
 
-    private void Update()
+    protected void Update()
     {   
 
         if (Input.GetMouseButtonDown(0)) // Check for tap/click input

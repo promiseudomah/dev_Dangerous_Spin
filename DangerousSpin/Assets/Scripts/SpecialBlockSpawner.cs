@@ -3,22 +3,22 @@ using UnityEngine;
 public class SpecialBlockSpawner : SquareBlockController
 {
     public GameObject specialBlockPrefab; // Prefab of the special block
-    public int specialBlockSpawnInterval = 3; // Interval to spawn the special block
 
-    private int blockCount; // Counter for the normal block spawn
+    private int normalBlockCount; // Counter for normal blocks spawned
+    private int currentNormalBlockCount; // Current count of normal blocks spawned
+
+    private void Start()
+    {
+        ResetBlockCounts();
+    }
 
     protected override void SpawnSquareBlock()
     {
-        blockCount++;
-
-        // Spawn a special block every specialBlockSpawnInterval times
-        if (blockCount % specialBlockSpawnInterval == 0)
+        currentNormalBlockCount++;
+        if (currentNormalBlockCount >= normalBlockCount)
         {
             SpawnSpecialBlock();
-        }
-        else
-        {
-            base.SpawnSquareBlock();
+            ResetBlockCounts();
         }
     }
 
@@ -26,7 +26,13 @@ public class SpecialBlockSpawner : SquareBlockController
     {
         float randomY = Random.Range(minYSpawn, maxYSpawn); // Randomize Y position
         Vector3 spawnPosition = new Vector3(transform.position.x, randomY, transform.position.z);
-        GameObject specialBlock = objectPooler.SpawnFromPool(specialBlockPrefab.tag, spawnPosition, Quaternion.identity);
+        GameObject specialBlock = Instantiate(specialBlockPrefab, spawnPosition, Quaternion.identity);
         specialBlock.transform.SetParent(transform);
+    }
+
+    private void ResetBlockCounts()
+    {
+        normalBlockCount = Random.Range(2, 6); // Randomly set the count for normal blocks
+        currentNormalBlockCount = 0;
     }
 }

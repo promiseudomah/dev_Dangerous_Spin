@@ -3,21 +3,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SquareController : BallController
+public class SquareController : MonoBehaviour
 {
-    [NonSerialized] protected new float rotationSpeed = 100f; // Speed modifier for rotation
-
-    [NonSerialized]
-    protected new bool isClockwise = true; // Flag to track the ball's movement direction
+    public float rotationSpeed = 100f; // Speed modifier for rotation
+    bool isClockwise = true; // Flag to track the ball's movement direction
 
     private void Update()
     {   
-        
-        if (Input.GetKeyDown(KeyCode.Space)) // Check for tap/click input
+
+        SwitchFlow();
+    }
+
+
+    public void SwitchFlow(){
+
+        // Calculate the rotation angle based on the speed modifier and the elapsed time
+        float rotationAngle = rotationSpeed * Time.deltaTime;
+
+        // Rotate the ball around the center of the screen
+        if (isClockwise)
         {
-            isClockwise = !isClockwise; // Toggle the movement direction
+            transform.RotateAround(Vector3.zero, Vector3.forward, rotationAngle);
         }
+        else
+        {
+            transform.RotateAround(Vector3.zero, Vector3.back, rotationAngle);
+        }
+
+        // Restrict movement in the x and y axes
+        Vector3 restrictedPosition = transform.position;
+        restrictedPosition.x = 0f;
+        restrictedPosition.y = 0f;
+        transform.position = restrictedPosition;
+    }
+
+    public void SwitchRotation(){
+
+            
+        isClockwise = !isClockwise; // Toggle the movement direction
         
-        Movement();
     }
 }

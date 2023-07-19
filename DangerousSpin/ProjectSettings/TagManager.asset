@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NormalBlock
   - SpecialBlock
+  - ScreenEnd
   layers:
   - Default
   - TransparentFX

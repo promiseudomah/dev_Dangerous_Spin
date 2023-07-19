@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
 {   
 
     [Space(10)]
+    [Header("Game Play Objects")]
+    public GameObject PlayArea;
+
+    [Space(10)]
     [Header("Game Manager Screens")]
     public GameObject PauseScreen;
     public GameObject GameOverScreen;
@@ -18,7 +22,7 @@ public class GameManager : MonoBehaviour
     [Space(10)]
     public Text Score; // Track the current pause state
     public Text EndScore; // Track the current pause state
-    public int scoreCount; // Track the current pause state
+    public int scoreCount = 0; // Track the current pause state
 
     #region Singleton
 
@@ -27,6 +31,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        PlayArea.SetActive(true);
     }
 
     #endregion
@@ -37,6 +42,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadMenu(){
         
+        Time.timeScale = 1f; 
         SceneManager.LoadScene(0);
     }
 
@@ -68,8 +74,10 @@ public class GameManager : MonoBehaviour
 
     public void AddScore(){
 
-        scoreCount += 10;
+        scoreCount += 1;
         Score.text = scoreCount.ToString();
+
+        FlowManager.Instance.FLOW(scoreCount);
     }
 
     public void GameOver()
@@ -96,6 +104,7 @@ public class GameManager : MonoBehaviour
     void EnableGameOverScreen(){
 
         GameOverScreen.SetActive(true);
+        PlayArea.SetActive(false);
     }
     void AddPlayCounts(){
 

@@ -31,7 +31,8 @@ public class MenuManager : MonoBehaviour
         highscore = PlayerPrefs.GetInt("SCORE").ToString();
         string gamesPlayed = PlayerPrefs.GetInt("PLAYED").ToString();
 
-        HighScore.text = $"BEST SCORE: {highscore}";
+        // string temp = HighScore.text;
+        // HighScore.text = $"BEST SCORE: {highscore}";
         BestScore.text = highscore;
         GamesPlayed.text = gamesPlayed;
     }

@@ -10,11 +10,11 @@ public class SquareBlockController : MonoBehaviour
     [SerializeField] protected float minYSpawn = 0.3f; // Minimum Y position for spawning
     [SerializeField] protected float maxYSpawn = 2.6f; // Maximum Y position for spawning
 
-    [HideInInspector] public ObjectPooler objectPooler; // Object pooler for square blocks
+    // [HideInInspector] public ObjectPooler objectPooler; // Object pooler for square blocks
 
     private void Start()
     {
-        objectPooler = ObjectPooler.Instance; // Get reference to the Object Pooler instance
+        // objectPooler = ObjectPooler.Instance; // Get reference to the Object Pooler instance
     }
 
     private void Update()
@@ -35,7 +35,7 @@ public class SquareBlockController : MonoBehaviour
         Debug.Log(randomY);
 
         Vector3 spawnPosition = new Vector3(transform.position.x, randomY, transform.position.z);
-        GameObject squareBlock = objectPooler.SpawnFromPool(squareBlockPrefab.tag, spawnPosition, Quaternion.identity);
+        GameObject squareBlock = ObjectPooler.Instance.SpawnFromPool(squareBlockPrefab.tag, spawnPosition, Quaternion.identity);
         squareBlock.transform.SetParent(transform);
     }
 
